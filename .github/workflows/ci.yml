@@ -11,8 +11,8 @@ jobs:
 
       - name: download
         run: |
-          git config --local user.email "s.chzhan@vvsu.ru"
-          git config --local user.name "yztutu"
+          git config --local user.email "s.chzhan@vvsu"
+          git config --local user.name "test"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           ./bin/youtube-dl --config-location config.txt
